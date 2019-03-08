@@ -5,10 +5,11 @@ php:
   - 7.3
 
 before_script:
-  - composer install --no-interaction --no-suggest --prefer-dist --classmap-authoritative
+  - travis_retry composer self-update
+  - travis_retry composer update --no-interaction --prefer-source  --classmap-authoritative
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
