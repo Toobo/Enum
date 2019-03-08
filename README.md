@@ -2,6 +2,11 @@
 
 A single-class, [Rust](https://doc.rust-lang.org/1.30.0/book/second-edition/ch06-00-enums.html)-inspired enum implementation for PHP.
 
+---
+[![license](https://img.shields.io/packagist/l/toobo/Enum.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![travis-ci status](https://img.shields.io/travis/Toobo/Enum.svg?style=flat-square)](https://travis-ci.org/Toobo/Enum)
+[![codecov.io](https://img.shields.io/codecov/c/github/Toobo/Enum.svg?style=flat-square)](http://codecov.io/github/Toobo/Enum?branch=master)
+---
 
 
 ### Basic Enum
