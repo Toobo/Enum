@@ -1,6 +1,7 @@
 {
     "name": "toobo/enum",
     "description": "Single-class, Rust-inspired enum implementation for PHP",
+    "keywords":  ["enum", "enumeration", "enumerable", "algebraic data types", "pattern matching"],
     "type": "library",
     "license": "MIT",
     "authors": [
