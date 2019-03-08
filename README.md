@@ -200,9 +200,9 @@ function safeJsonDecode(string $thing): Result
     $decoded = @json_decode($thing);
     if (json_last_error()) {
         return Result::ERROR(json_last_error_msg());
-	}
+    }
 
-	return Result::OK($decoded);
+    return Result::OK($decoded);
 }
 ```
 
@@ -228,9 +228,9 @@ There are several getters:
 
 #### Checking Enum Identity
 
-**`Enum::isVariant()` ** accepts a string and returns true if it matches the current enum variant. Basically, `$enum->isVariant(Thing::FOO)` is the same as `$enum->variant() === Thing::FOO`.
+**`Enum::isVariant()`** accepts a string and returns true if it matches the current enum variant. Basically, `$enum->isVariant(Thing::FOO)` is the same as `$enum->variant() === Thing::FOO`.
 
-**`Enum::isAnyVariant()` ** is the variadic version of `Enum::isVariant()` and arguments are combined with an `OR` logic, i.e. calling `$this->isAnyVariant($a, $b, $c)` is the same as calling: `$this->isVariant($a) || $this->isVariant($b) || $this->isVariant($c)`.
+**`Enum::isAnyVariant()`** is the variadic version of `Enum::isVariant()` and arguments are combined with an `OR` logic, i.e. calling `$this->isAnyVariant($a, $b, $c)` is the same as calling: `$this->isVariant($a) || $this->isVariant($b) || $this->isVariant($c)`.
 
 **`Enum::is()`** accepts as argument an enum instance and returns a boolean that is true when the given enum and the enum the method is called on, are equivalent, which means they represent the same "variant" and, in case the enum accepts arguments, they also have same arguments.
 
@@ -258,14 +258,14 @@ However, might be desirable that such instances are considered matching if the _
 public function is(Enum $enum): bool
 {
     $areSame = $this->looksLike($enum);
-	if ($areSame !== null) {
-		return $areSame;
-	}
+    if ($areSame !== null) {
+        return $areSame;
+    }
 
-	// Make sure we compare date in the same timezone
-	$enumDate = $enum->date->setTimezone($this->date->getTimezone());
+    // Make sure we compare date in the same timezone
+    $enumDate = $enum->date->setTimezone($this->date->getTimezone());
 
-	return $enumDate->format('Ymd') === $this->date->format('Ymd');
+    return $enumDate->format('Ymd') === $this->date->format('Ymd');
 }
 ```
 
@@ -369,14 +369,14 @@ function greet(User $user)
 {
     $user->match(
         [User::ACTIVE, function (User $user) {
-			print "Welcome back {$user->name}!";
-		}],
+            print "Welcome back {$user->name}!";
+        }],
         [User::NOT_ACTIVE, function (User $user) {
-			print "Hi {$user->name}, please activate your account.";
-		}],
+            print "Hi {$user->name}, please activate your account.";
+        }],
         [User::ACTIVE(User::_, 'root'), function () {
-			print 'Hello Administrator!';
-		}],
+            print 'Hello Administrator!';
+        }],
     );
 }
 
