@@ -6,6 +6,8 @@ A single-class, [Rust](https://doc.rust-lang.org/1.30.0/book/second-edition/ch06
 [![license](https://img.shields.io/packagist/l/toobo/Enum.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![travis-ci status](https://img.shields.io/travis/Toobo/Enum.svg?style=flat-square)](https://travis-ci.org/Toobo/Enum)
 [![codecov.io](https://img.shields.io/codecov/c/github/Toobo/Enum.svg?style=flat-square)](http://codecov.io/github/Toobo/Enum?branch=master)
+[![release](https://img.shields.io/github/release/Toobo/Enum.svg?style=flat-square)](https://github.com/Toobo/Enum/releases/latest)
+[![packagist](https://img.shields.io/packagist/v/Toobo/Enum.svg?style=flat-square)](https://packagist.org/packages/toobo/enum)
 ---
 
 
