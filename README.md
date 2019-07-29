@@ -131,7 +131,7 @@ An example:
 use Toobo\Enum;
 
 /**
- * @method static Result Ok($thing)
+ * @method static Result OK($thing)
  * @method static Error ERROR(string $message)
  */
 class Result extends Enum
